@@ -178,11 +178,11 @@ public class viewHomepage {
     public void browse() {
         browsePanel = new JPanel(new GridLayout(10, 1));
 
-        browsePanel.add(new JLabel("Kiểm tra cuối kỳ môn IT4895Q", new ImageIcon(System.getProperty("user.dir") + "/src/icon/test.png"), JLabel.LEFT));
-        browsePanel.add(new JLabel("Thi thử KTLT", new ImageIcon(System.getProperty("user.dir") + "/src/icon/test.png"), JLabel.LEFT));
-        browsePanel.add(new JLabel("Thi GK2 Tin học 7", new ImageIcon(System.getProperty("user.dir") + "/src/icon/test.png"), JLabel.LEFT));
-        browsePanel.add(new JLabel("Thi GK2 Sử Địa 7", new ImageIcon(System.getProperty("user.dir") + "/src/icon/test.png"), JLabel.LEFT));
-        browsePanel.add(new JLabel("Thi giữa kỳ 2 môn Công nghệ", new ImageIcon(System.getProperty("user.dir") + "/src/icon/test.png"), JLabel.LEFT));
+        browsePanel.add(new JLabel("Kiểm tra cuối kỳ môn IT4895Q", new ImageIcon("src/icon/test.png"), JLabel.LEFT));
+        browsePanel.add(new JLabel("Thi thử KTLT", new ImageIcon("src/icon/test.png"), JLabel.LEFT));
+        browsePanel.add(new JLabel("Thi GK2 Tin học 7", new ImageIcon("src/icon/test.png"), JLabel.LEFT));
+        browsePanel.add(new JLabel("Thi GK2 Sử Địa 7", new ImageIcon("src/icon/test.png"), JLabel.LEFT));
+        browsePanel.add(new JLabel("Thi giữa kỳ 2 môn Công nghệ", new ImageIcon("src/icon/test.png"), JLabel.LEFT));
 
         browsePanel.setBackground(Color.WHITE);
         browsePanel.setBorder(BorderFactory.createLineBorder(Color.GRAY));
