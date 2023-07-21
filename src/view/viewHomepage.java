@@ -40,7 +40,7 @@ public class viewHomepage {
     
     //Function variables
     private JButton edit, questionSetup;
-    private JLabel path;
+    private JLabel mainLogo, path;
     private JMenuItem puQues_categories, puQues_export, puQues_import, puQues_questions;
     private JPanel functionPanel;
 
@@ -106,7 +106,7 @@ public class viewHomepage {
     //Function panel methods
 
     private void function() {
-        JLabel label = new JLabel(new ImageIcon("src\\icon\\mainLogo.png"));
+        mainLogo = new JLabel(new ImageIcon("src\\icon\\mainLogo.png"));
         edit = new JButton("Bật chế độ chỉnh sửa");
         functionPanel = new JPanel();
         questionSetup = new JButton(new ImageIcon("src\\icon\\questionSetup.png"));
@@ -117,12 +117,8 @@ public class viewHomepage {
         edit.setFont(edit.getFont().deriveFont(Font.BOLD));
         edit.setForeground(Color.WHITE);
 
-        label.setBounds(5, 5, 124, 51);
-        label.addMouseListener(new MouseAdapter() {
-            public void mouseClicked(MouseEvent me) {
-                returnHomepage();
-            }
-        });
+        mainLogo.setBounds(5, 5, 124, 51);
+        mainLogo.addMouseListener(hListener);
 
         path = new JLabel("Home   /   My Course  /  THI CUỐI KỲ");
         path.setBounds(5, 60, 1800, 25);
@@ -131,7 +127,7 @@ public class viewHomepage {
         questionSetup.setBounds(1830, 20, 30, 20);
 
         functionPanel.add(edit);
-        functionPanel.add(label);
+        functionPanel.add(mainLogo);
         functionPanel.add(path);
         functionPanel.add(questionSetup);
         functionPanel.setBackground(Color.WHITE);
@@ -328,15 +324,12 @@ public class viewHomepage {
         gbc.gridx = 0; gbc.gridy = 3;                                                                       _import.add(label4, gbc);
     }
     
-    public void returnHomepage() {
-        getBrowsePanel().removeAll();
-        browse();
-    }
     //Getter
     public JPanel getBrowsePanel() {return browsePanel;}
     public JButton getEdit() {return edit;}    
     public JPanel getEditPanel() {return editPanel;}
     public JTabbedPane getEditTabbedPane() {return editTabbedPane;}
+    public JLabel getMainLogo() {return mainLogo;}
     public modelHomepage getModelHomepage() {return mHomepage;}
     public JLabel getPath() {return path;}
     public JMenuItem getPuQues_categories() {return puQues_categories;}

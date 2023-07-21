@@ -26,7 +26,12 @@ public class controllerHomepage {
             }
         }
 
-        public void mouseClicked(MouseEvent me) {};
+        public void mouseClicked(MouseEvent me) {
+            if (me.getSource() == vHomepage.getMainLogo()) {
+                vHomepage.getEditPanel().setVisible(false);
+                vHomepage.getBrowsePanel().setVisible(true);
+            }
+        };
         public void mouseEntered(MouseEvent me) {};
         public void mouseExited(MouseEvent me) {};
         public void mousePressed(MouseEvent me) {
